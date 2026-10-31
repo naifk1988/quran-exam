@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#1f5a3c">
 <title>نماذج اختبار الحفظ</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Noto+Naskh+Arabic:wght@400;500;700&family=Noto+Kufi+Arabic:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <style>
 [hidden]{display:none!important}
 
@@ -14,9 +14,9 @@
   --paper:#f6f1e4; --bg:#ebe4d2; --fg:#2a2418; --muted:#6f6554;
   --frame:#1f5a3c; --frame-2:#c9a44a; --card:#fbf8ef; --line:#d9cfb6;
   --hl:#fff1a8; --mark:#8b2e2e; --done:#2e7d4f;
-  --font-quran:"Amiri Quran","Noto Naskh Arabic",serif;
-  --font-ui:"Noto Naskh Arabic",system-ui,serif;
-  --font-head:"Noto Kufi Arabic","Noto Naskh Arabic",sans-serif;
+  --font-quran:"Amiri Quran","Amiri",serif;
+  --font-ui:"IBM Plex Sans Arabic",system-ui,sans-serif;
+  --font-head:"Amiri","Amiri Quran",serif;
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
   --paper:#f3edde; --bg:#17191c; --fg:#e8e3d6; --muted:#a39b8a; --frame:#2f7a53; --frame-2:#d4b35e;
@@ -30,7 +30,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-ui);di
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--frame)}
 .wrap{max-width:760px;margin:0 auto;padding-block:0 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--frame);color:#fff;margin:0 calc(-1 * max(16px,env(safe-area-inset-right,0px))) 16px calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:12px max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px));border-bottom:3px solid var(--frame-2)}
-header.top h1{margin:0;font:700 20px/1.3 var(--font-head)}
+header.top h1{margin:0;font:700 28px/1.3 var(--font-head)}
 header.top p{margin:3px 0 8px;font-size:13px;opacity:.9}
 .tabs{display:flex;gap:4px}
 .tab{appearance:none;border:0;background:rgba(255,255,255,.12);color:#fff;font:500 15px/1 var(--font-ui);padding:10px 16px;border-radius:8px 8px 0 0;cursor:pointer}
@@ -39,10 +39,10 @@ header.top p{margin:3px 0 8px;font-size:13px;opacity:.9}
 .rules{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;color:var(--muted);margin:0 0 18px}
 .rules b{color:var(--fg);font-weight:500}
 section.branch{margin-bottom:24px}
-.branch h2{margin:0 0 8px;font:700 17px/1.3 var(--font-head);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.branch h2{margin:0 0 10px;font:700 22px/1.3 var(--font-head);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .branch h2 small{font:400 13px/1.3 var(--font-ui);color:var(--muted);margin-inline-start:auto}
 .models{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
-.model{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--fg);font:700 15px/1.2 var(--font-head);padding:12px 6px;border-radius:10px;cursor:pointer;min-height:56px;display:flex;flex-direction:column;align-items:center;gap:4px}
+.model{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--fg);font:700 19px/1.2 var(--font-head);padding:12px 6px;border-radius:10px;cursor:pointer;min-height:56px;display:flex;flex-direction:column;align-items:center;gap:4px}
 .model small{font:400 12px/1 var(--font-ui);color:var(--muted);font-variant-numeric:tabular-nums}
 .model.done{border-color:var(--done)}
 .model.done small{color:var(--done)}
@@ -51,7 +51,7 @@ section.branch{margin-bottom:24px}
 .screen{position:fixed;inset:0;z-index:20;background:var(--bg);overflow:auto;padding:calc(env(safe-area-inset-top,0px) + 10px) max(12px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 24px) max(12px,env(safe-area-inset-left,0px))}
 .screen .inner{max-width:760px;margin:0 auto}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
-.bar .who{font:700 17px/1.3 var(--font-head)}
+.bar .who{font:700 21px/1.3 var(--font-head)}
 .bar .who small{display:block;font:400 13px/1.3 var(--font-ui);color:var(--muted)}
 .btn{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--fg);font:500 15px/1 var(--font-ui);padding:10px 14px;border-radius:8px;cursor:pointer;min-height:40px}
 .btn.primary{background:var(--frame);color:#fff;border-color:var(--frame)}
@@ -73,14 +73,14 @@ section.branch{margin-bottom:24px}
 .page .head{display:flex;justify-content:space-between;font:500 11px/1 var(--font-ui);color:var(--frame);margin-bottom:1.2%}
 .page .lines{flex:1;min-height:0;position:relative;overflow:hidden}
 .page .txt{font-family:var(--font-quran);text-align:justify;text-align-last:justify;word-spacing:.05em;direction:rtl}
-.page .txt .sh{text-align:center;text-align-last:center;font:700 .62em/1 var(--font-head);color:#fff;background:var(--frame);border:2px solid var(--frame-2);border-radius:6px;display:flex;align-items:center;justify-content:center;margin:0}
+.page .txt .sh{text-align:center;text-align-last:center;font:700 .72em/1 var(--font-head);color:#fff;background:var(--frame);border:2px solid var(--frame-2);border-radius:6px;display:flex;align-items:center;justify-content:center;margin:0}
 .page .txt .bs{text-align:center;text-align-last:center}
 .page .txt .v.hl{background:linear-gradient(transparent 12%,var(--hl) 12%,var(--hl) 88%,transparent 88%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .page .txt .n{display:inline-block;color:var(--mark);font-family:var(--font-ui);font-weight:700;font-size:.62em;width:1.55em;height:1.55em;line-height:1.45em;text-align:center;text-align-last:center;border:1.5px solid var(--frame-2);border-radius:50%;vertical-align:middle;margin:0 .15em;box-shadow:inset 0 0 0 1px var(--paper),inset 0 0 0 2px var(--frame)}
 .page .foot{text-align:center;font:500 12px/1 var(--font-ui);color:var(--frame);margin-top:1.2%;font-variant-numeric:tabular-nums}
 
 .answer{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
-.answer h3{margin:0 0 8px;font:700 15px/1.3 var(--font-head);color:var(--mark)}
+.answer h3{margin:0 0 8px;font:700 19px/1.3 var(--font-head);color:var(--mark)}
 .answer ol{margin:0;padding:0 18px 0 0;display:grid;gap:10px}
 .answer li .ay{font-family:var(--font-quran);font-size:21px;line-height:1.9}
 .answer li .loc{font-size:13px;color:var(--muted)}
